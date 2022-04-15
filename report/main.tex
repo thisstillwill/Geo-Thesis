@@ -1,5 +1,6 @@
-\documentclass[12pt,twocolumn,twoside,abstract=true]{scrartcl}
-\usepackage[backend=biber,style=ieee]{biblatex}
+\documentclass[letterpaper,12pt,twocolumn,twoside,abstract=true]{scrartcl}
+\usepackage[backend=biber,style=ieee,citestyle=numeric-comp]{biblatex}
+\addbibresource{references.bib}
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
     \monthname[\THEMONTH] \THEYEAR}
@@ -8,7 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{microtype}
-\usepackage{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 \usepackage{cleveref}
 
 \begin{document}
@@ -23,6 +24,7 @@
 
 \input{introduction.tex}
 \input{background.tex}
+\input{related.tex}
 \input{approach.tex}
 \input{implementation.tex}
 \input{evaluation.tex}
