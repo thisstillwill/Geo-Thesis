@@ -1,1 +1,15 @@
 \section{Approach}
+
+The design of a product straddles two distinct areas. The first, and most important, is the intended user experience. In order to evaluate my hypothesis, it was necessary to determine what features might be able to produce the desired user behavior. A large part of this process involved deciding how my project would both draw from and differentiate itself from existing platforms. Ultimately, I envisioned an application with the following qualities:
+
+\begin{enumerate}
+    \item A main screen showing the user's current location overlaid on a map of the surrounding area
+    \item The ability to leave messages tied to one's location, viewable by other users and disappearing after 24 hours
+    \item The restriction that a message can only be viewed when near the coordinates where it was posted
+\end{enumerate}
+
+I drew direct inspiration from Snapchat and Yik Yak in several regards. The idea of a main map screen, similar to Snap Maps, was intended to center the user experience to the world around them. Likewise, the ephemeral nature of messages mimics how individual Snaps last for only a day. The intended effect of this aspect was to keep any message encountered in the world temporally relevant. Because messages are tagged to a physical location they are also spatially relevant in the way Yik Yak messages are.
+
+The defining characteristic of my app, however, is that access to messages is directly gated to physical proximity. While Snap Maps allows users to view Snaps anywhere on the map, and Yik Yak reveals any message sent within 5 miles, my app requires users to be almost within sight of where a message was posted in order to interact with it. My goal was that this requirement would better connect users with the messages they found by placing them in the same geospatial context.
+
+The second area of design relates to the actual implementation of the product. Given the dominance of mobile devices in social media~\cite{umaine_2021}, I decided on an iPhone app as primary interface. This had the added benefit of access to \textsf{MapKit}, Apple's framework for working with geographic visualization. The actual application follows a distributed client-server model, with the server handling user accounts, geospatial queries, and other shared functionality.
