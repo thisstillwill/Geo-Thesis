@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production npm-run-all clean build:site --parallel --race build:serve build:pdf",
     "build:site": "reveal-md src/slides.md --static build/_site --static-dirs=src/static",
     "build:serve": "reveal-md --disable-auto-open --host localhost --port 8000 src/slides.md",
-    "build:pdf": "wait-on http://localhost:8000/slides.md#/ && decktape reveal http://localhost:8000/slides.md#/ build/slides.pdf"
+    "build:pdf": "wait-on http://localhost:8000/slides.md#/ && decktape --size='1920x1400' reveal http://localhost:8000/slides.md#/ build/slides.pdf"
   },
   "repository": {
     "type": "git",
