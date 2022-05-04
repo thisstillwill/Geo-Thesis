@@ -1,11 +1,9 @@
-\documentclass[letterpaper,12pt,DIV=calc,titlepage=true,twocolumn,twoside=true,abstract=true]{scrartcl}
+\documentclass[letterpaper,12pt,DIV=calc,titlepage=true,twocolumn,abstract=true]{scrartcl}
 \usepackage[scaled]{helvet}
 \usepackage[lining]{ebgaramond}
+\usepackage{geometry}
+\AfterCalculatingTypearea{\geometry{left=1.5in,right=1in}}
 \recalctypearea
-\let\tmp\oddsidemargin
-\let\oddsidemargin\evensidemargin
-\let\evensidemargin\tmp
-\reversemarginpar
 \usepackage[USenglish]{babel}
 \usepackage[backend=biber,style=ieee,citestyle=numeric-comp]{biblatex}
 \AtBeginBibliography{\raggedright}
